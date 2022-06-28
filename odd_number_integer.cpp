@@ -1,33 +1,37 @@
+/*include the libraries*/
 #include <iostream>
 #include <vector>
 
 using namespace std;
 
-//function to find odd integer
+/*function to find odd number*/
 int oddInteger(vector <int> a)
 {
-    int result=0;
-    for (unsigned int i = 0; i < a.size(); i++)
+    int result = 0;
+
+    for(unsigned int i = 0; i < a.size(); i++)
     {
-        result = result^a[i];   
+        result = result ^ a[i];
     }
     return result;
 }
 
-//main function to test code
-int main()  {
+/*main function for the code to run*/
+int main()
+{
     int n;
-    //input total number of elements
-    cin >> n;
-    vector<int> a(n);
 
-    //read n numbers
-    for (int i = 0; i < n; ++i)
+    /*input the number of elements in the vector*/
+    cin >> n;
+    vector <int> a(n);
+
+    /*read n elements from the user*/
+    for(int i = 0; i < n; i++)
     {
         cin >> a[i];
-    } 
+    }
 
-    //find and print result
+    /*find and print the odd number*/
     int result = oddInteger(a);
     cout << result << endl;
 
