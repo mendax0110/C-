@@ -1,35 +1,43 @@
-//Count Occurrence of a Word in String (frequency)
+/*include the library*/
 #include <iostream>
 #include <stdio.h>
+
 using namespace std;
 
+/*main function*/
 int main()
 {
     char str[200], word[20];
     int i = 0, j, temp, countW = 0, chk;
-    
-    cout << "Enter the String: ";
+
+    /*input the string*/
+    cout << "Enter the string: ";
     gets(str);
-    cout << "Enter the Word: ";
+    cout << "Enter the word: ";
     gets(word);
 
-    while (str[i] != '\0')
+    while(str[i] != '\0')
     {
         temp = i;
         j = 0;
-        while (word[j] != '\0')
+
+        while(word[j] != '\0')
         {
-            if (str[i] == word[j])
+            if(str[i] == word[j])
                 i++;
                 j++;
         }
+
         chk = i -temp;
-        if (chk == j)
+        if(chk == j)
             countW++;
             i = temp;
             i++;
     }
-    cout << "\nOccurrence of '" << word << "' = " << countW;
+
+    /*output the result*/
+    cout << "\nOccurance of the word: " << countW;
     cout << endl;
+
     return 0;
 }
