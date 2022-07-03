@@ -1,37 +1,39 @@
+/*include the library*/
 #include <iostream>
 
 using namespace std;
 
 class A
 {
-    //private by default
-    string data = "Data";   //original data defined in the base class
+    /*private by default*/
+    string data = "Data";   /*original data defined in the base class*/
     public:
-    virtual void display()  //virtual function defined in the base
+    virutal void display()  /*virtual function defined in the base*/
     class
     {
-        cout << "The data is : " << data << endl;
+        cout << "The data is: " << data << endl;
     }
 };
 
 class B: public A
 {
-    string value = "VFM"; //virtual function redefined in the derived class
+    string value = "VEM"; /*virtual function redefined in the derived class*/
     public:
     void display()
     {
-        cout << "The data is : " << value << endl;
+        cout << "The data is: " << value << endl;
     }
 };
 
+/*main function*/
 int main()
 {
-    cout << "Welcome to virtual funcion memory!" << endl << endl;
+    cout << "Welcome to the virtual memory function!" << endl << endl;
 
     A *a;
-    B b;
+    B *b;
     a = &b;
-    a-> display();  //changes reflected in the original data by function call
+    a-> display();  /*changes reflected in the original data by function call*/
 
     return 0;
 }
