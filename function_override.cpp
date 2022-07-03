@@ -1,19 +1,31 @@
+/*include the library*/
 #include <iostream>
+
 using namespace std;
 
-class BaseClass{
+/*class*/
+class BaseClass
+{
     public:
-        void disp(){
-            cout << "Funtion of Parent Class";
+        void disp()
+        {
+            cout << "Function of Parent Class";
         }
 };
-class DerivedClass : public BaseClass{
+
+/*class*/
+class DerivedClass : public BaseClass
+{
     public:
-        void disp(){
+        void disp()
+        {
             cout << "Function of Child Class";
         }
 };
-int main(){
+
+/*main function*/
+int main()
+{
     DerivedClass obj = DerivedClass();
     obj.disp();
     return 0;
