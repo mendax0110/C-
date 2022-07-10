@@ -1,24 +1,34 @@
+/*include the libraries*/
 #include <iostream>
 #include <dirent.h>
+
 using namespace std;
 
+/*main function*/
 int main()
 {
     struct dirent *d;
     DIR *dr;
     dr = opendir(" . ");
-    if (dr != NULL)
+    
+    /*list files in the current directory*/
+    if(dr != NULL)
     {
+        /*read the files in the current directory*/
         cout << "List of Files & Folders:-\n";
-        for (d = readdir(dr); d != NULL; d = readdir(dr))
+
+        for(d = readdir(dr); d != NULL; d = readdir(dr))
         {
             cout << d-> d_name << endl;
         }
         closedir(dr);
     }
     else
-    cout << "\nError Occured!";
-    cout << endl;
+    {
+        /*error*/
+        cout << "\nError Occured!";
+        cout << endl;
+    }
 
     return 0;
 }
