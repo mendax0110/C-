@@ -1,31 +1,45 @@
+/*include the library*/
 #include <iostream>
+
 using namespace std;
 
-struct STUDYOS{
-    char stuName[1.5];
+/*define the structure*/
+struct STUDYOS
+{
+    char stuName[30];
     int stuRollNo;
     int stuvers;
 };
-void printSTUDYOSInfo(STUDIOS);
-int main(){
+
+void printSTUDYOSInfo(STUDYOS);
+
+/*main function*/
+int main()
+{
     STUDYOS s;
 
-    cout << "Enter a OS-Version Name: ";
+    /*input the data*/
+    cout << "Enter a OS-version name: ";
     cin.getline(s.stuName, 30);
 
-    cout << "Enter STUDYOS Roll No: ";
+    /*input the data*/
+    cout << "Enter a OS-version roll no: ";
     cin >> s.stuRollNo;
-
-    cout << "Enter a STUDYOS Version: ";
+    
+    /*input the data*/
+    cout << "Enter a STUDYOS version: ";
     cin >> s.stuvers;
 
     printSTUDYOSInfo(s);
+
     return 0;
 }
-void printSTUDYOSInfo(STUDYOS s){
-    cout << "STUDYOS Record: "   << endl;
-    cout << "OS-Version Name: "  << s.stuName   << endl;    
-    cout << "STUDY-OS Roll No: " << s.stuRollNo << endl;
-    cout << "STUDY-OS Version: " << s.stuvers   << Endl;
-}
 
+/*function to print the STUDYOS info*/
+void printSTUDYOSInfo(STUDYOS s)
+{
+    cout << "STUDYOS Record: "     << endl;
+    cout << "OS-version name: "    << s.stuName     << endl;
+    cout << "OS-version roll no: " << s.stuRollNo   << endl;
+    cout << "STUDYOS version: "    << s.stuvers     << endl;
+}
