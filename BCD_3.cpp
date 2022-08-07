@@ -8,7 +8,7 @@ using namespace std;
 
 uint makeReverseBCD(uint num);
 
-/*main function*/
+/*main function */
 int main()
 {
     uint n;
@@ -31,7 +31,7 @@ uint reverseBinary(uint num)
 }
 
 /*using the normal operator and uint
- *using bitwise operator
+ *using bitwise operators to make the reverse BCD
  */
 uint makeReverseBCD(uint num)
 {
@@ -44,4 +44,3 @@ uint makeReverseBCD(uint num)
 
     return BCD;
 }
-
