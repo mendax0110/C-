@@ -1,5 +1,7 @@
+/*include the libraries*/
 #include <iostream>
 #include <math.h>
+
 using namespace std;
 
 int main()
@@ -7,14 +9,16 @@ int main()
     long int i, no;
     int x, y = 0;
 
-    cout << "Enter any binary number: ";
+    /*give the binary number*/
+    cout << "Enter a binary number: ";
     cin >> no;
-    cout << "\nThe decimal conversion of " << no << " is ";
+    /*convert the binary number to decimal*/
+    cout << "\nThe decimal equivalent of " << no << " is: ";
 
-    for (i = 0; no != 0; i++)
+    for(i = 0; no != 0; i++)
     {
         x = no % 10;
-        y = (x) * (pow(2, i)) + y;
+        y = y + x * pow(2, i);
         no = no / 10;
     }
 
