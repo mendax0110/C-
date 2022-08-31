@@ -1,19 +1,29 @@
+/*include the header file*/
 #include <iostream>
+
 using namespace std;
 
-class construct{
+/*constructor class*/
+class construct
+{
     public:
         int num;
         char ch;
 
-        construct(){
-            num = 100; ch = 'A';
+        construct()
+        {
+            num = 100;
+            ch  = 'A';
         }
 };
-int main(){
+
+/*main function*/
+int main()
+{
     construct obj;
 
     cout << "num: " << obj.num << endl;
-    cout << "ch: " << obj.ch;
+    cout << "ch: "  << obj.ch;
+
     return 0;
 }
