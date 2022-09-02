@@ -1,18 +1,23 @@
+/*include the header files*/
 #include <stdio.h>
 #include <stdlib.h>
 
+/*function to allocate memory*/
 void func(int **b)
 {
     *b  = (int*)malloc(sizeof(int));
-    **b = 400;
+    **b = 10;
 
-    printf("%d\n", **b); //print the "what" here
+    /*print the value of b*/
+    printf("%d\n", **b);
 }
 
+/*main function*/
 int main()
 {
     int **a = (int**)malloc(sizeof(int*));
     func(a);
 
-    printf("%d\n", **a); //print the "why" here
+    /*print the value of a*/
+    printf("%d\n", **a);
 }
