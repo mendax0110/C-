@@ -1,19 +1,22 @@
-/*include the librarys*/
+/*include the header file*/
 #include <iostream>
 
+/*using namespace std*/
 using namespace std;
 
-void funktion(int* zahl2)
+void function(int* num2)
 {
-	cout << "Adresse zahl2: " << &zahl2 << endl;
-	*zahl2 *= 2;
+	cout << "address of num2 in function: " << num2 << endl;
+	*num2 *= 10;
 }
 
+/*main function*/
 int main()
 {
-	int zahl1 = 5;
-	cout << "Zahl vor der Funktion: " << zahl1 << endl;
-	cout << "Adresse: " << &zahl1 << endl;
-	funktion (&zahl1);
-	cout << "Zahl1 nach der Funktion: " << zahl1 << endl;
+	int num1 = 5;
+	/*print the address of num1*/
+	cout << "address of the function: " << num1 << endl;
+	cout << "address: " << &num1 << endl;
+	function(&num1);
+	cout << "Number after the function: " << num1 << endl;
 }
