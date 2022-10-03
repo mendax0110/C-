@@ -1,15 +1,24 @@
+// include the header file
 #include <iostream>
+
+// use the standard namespace
 using namespace std;
 
+// main function
 int main()
 {
     float c;
 
-    cout << "Enter temperature in Celsius\n";   //inputting the temperature
+    // get the input from the user
+    cout << "Enter temperature in Celsius: ";
     cin >> c;
 
-    float f = (9 * c) / 5;  //calculating the first part of the formula
-    f += 32;    //calculating the remaining part
+    // convert the temperature
+    // calculate the first part of the formula
+    float f = (c * 9 / 5); 
+    // add the second part of the formula
+    f += 32;
 
-    cout << "temperature in Fahrenheit:" << f;  //printing the calculated
+    // display the result
+    cout << c << " degree Celsius = " << f << " degree Fahrenheit" << endl;
 }
