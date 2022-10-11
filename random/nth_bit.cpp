@@ -1,19 +1,24 @@
-/*include the library*/
+// include the header file
 #include <iostream>
 #include <bits/stdc++.h>
 
 using namespace std;
 
-/*main function*/
+// main function
 int main()
 {
     int num, n;
 
+    // take input from user
     cout << "Enter the number: ";
     cin >> num;
 
-    cout << "Enter the bit number you wish to obtain: ";
+    // take input from user
+    cout << "Enter the bit position: ";
     cin >> n;
 
-    cout << "Answer: " << (1 & (num >> (n - 1)));
+    // print the result
+    cout << "The " << n << "th bit is " << ((num >> (n - 1)) & 1) << endl;
+
+    return 0;
 }
