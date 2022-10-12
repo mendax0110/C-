@@ -1,51 +1,61 @@
+// include the header files
 #include <iostream>
 #include <fstream>
 #include <stdio.h>
 
 using namespace std;
+
+// main function
 int main()
 {
     char fileName[30], ch;
     fstream fps, fpt;
-    cout << "Enter the Name of the File: ";
+    
+    // get the file name
+    cout << "Enter the name of file to be encrypted: ";
     gets(fileName);
-    fps.open(fileName, fstream :: in);
-    if (!fps)
+    fps.open(fileName, fstream::in);
+
+    // open the file in read mode
+    if(!fps)
     {
-        cout << "\nError Occurred, Opening the Source File (to Read) !";
+        cout << "\nError Occured, Opening the Source File (to Read)!";
         return 0;
     }
-    fpt.open("tmp.text", fstream :: out);
-    if (!fpt)
+    fpt.open("temp.txt", fstream::out);
+    if(!fpt)
     {
-        cout << "\nError Occurred, Opening/Creating the tmp File!";
+        cout << "\nError Occured, Opening/Creating the tmp File!";
         return 0;
     }
-    while (fps >> noskipws >> ch)
+    while(fps >> noskipws >> ch)
     {
         ch = ch + 100;
         fpt << ch;
     }
     fps.close();
     fpt.close();
-    fps.open(fileName, fstream :: out);
-    if (!fps)
+    fps.open(fileName, fstream::out);
+    if(!fps)
     {
-        cout << "\nError Occurred, Opening the Source File (to write) !";
+        cout << "\nError Occured, Opening the Source File (to Write)!";
         return 0;
     }
-    fpt.open("tmp.txt", fstream :: in);
-    if (!fpt)
+    fpt.open("temp.txt", fstream::in);
+    if(!fpt)
     {
-        cout << "\nError Occurred, Opening the tmp File!";
+        cout << "\nError Occured, Opening the tmp File!";
         return 0;
     }
-    while (fpt >> noskipws >> ch)
+    while(fpt >> noskipws >> ch)
+    {
         fps << ch;
+    }
     fps.close();
     fpt.close();
-    
-    cout << "\nFile '" << fileName "' Encrypted Successfully!";
+
+    // print the message
+    cout << "\nFile Encrypted Successfully!";
     cout << endl;
 
     return 0;
