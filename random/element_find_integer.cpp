@@ -1,36 +1,59 @@
+// include the libraries
+#include <iostream>
 #include <bits/stdc++.h>
 
 using namespace std;
 
-//find elements having at-least two greater elements
-
-void greater_elements(int arr[], int n) {
+// find elements having at-least two greater elements
+void findElements(int arr[], int n)
+{
+    // get the user input
     cout << "\nElements which have at-least two greater elements are: ";
 
-    for (int i = 0; i < n; i++) {
-        int
+    // traverse the array
+    for(int i = 0; i < n; i++)
+    {
+        int count = 0;
         var = 0;
-        for (int j = 0; j < n; j++)
-            if (arr[j] > arr[i])
-            var ++;
-            if (var >= 2)
-            cout << arr[i] << " ";
+
+        for(int j = 0; j < n; j++)
+        {
+            if(arr[i] < arr[j])
+            {
+                count++;
+            }
+            if(var >= 2)
+            {
+                cout << arr[i] << " ";
+            }
+        }
     }
 }
 
-int main () {
+// main function
+int main()
+{
     int arr[100], n, i;
 
-    cout << "Enter number of elements: ";
+    // get the user input
+    cout << "Enter the number of elements: ";
     cin >> n;
 
-    cout << "\nEnter elements: ";
-        for (i = 0; i < n; i++)
-    cin >> arr[i];
+    // get the user input
+    cout << "Enter the elements: ";
+    for(i = 0; i < n; i++)
+    {
+        cin >> arr[i];
+    }
 
+    // get the user input
     cout << "Elements are: ";
-        for (i = 0; i < n; i++)
-    cout << arr[i] << " ";
-        greater_elements(arr, n);
+    for(i = 0; i < n; i++)
+    {
+        cout << arr[i] << " ";
+    }
+
+    greater_elements(arr, n);
+
     return 0;
 }
