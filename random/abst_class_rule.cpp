@@ -1,26 +1,38 @@
+// include the header file
 #include <iostream>
 
 using namespace std;
-class STUDIOS{
-    public:
-    //pure virtual function
-    virtual void sound() = 0;
 
-    //normal member function
-    void sleeping() {
-        cout << "Sleeping";
-    }
-};
-class LINUX: public STUDIOS{
+// define the class
+class STUDIOS
+{
     public:
-        void sound() {
-            cout << "BEEP" << endl;
+        // pure virtual function
+        virtual void studio() = 0;
+
+        // normal member function
+        void studio_name()
+        {
+            cout << "This is a studio." << endl;
         }
 };
-int main(){
-    LINUX obj;
-    obj.sound();
-    obj.sleeping();
+
+// define the derived class
+class STUDIOS1 : public STUDIOS
+{
+    public:
+        void studio()
+        {
+            cout << "This is a studio1." << endl;
+        }
+};
+
+// main function
+int main()
+{
+    STUDIOS1 obj;
+    obj.studio();
+    obj.studio_name();
+
     return 0;
 }
-
