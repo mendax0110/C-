@@ -1,16 +1,22 @@
+// include the header files
 #include <cstdio>
 #include <chrono>
 #include <random>
 #include "fastmod.h"
 
+using namespace fastmod;
+
+// tempplate for benchmarking
 template <typename T> inline void doNotOptimizeAway(T&& datum)
 {
     //taken from fb folly from github
     asm volatile("" :: "m"(datum) : "memory");
 }
 
-using namespace fastmod;
+
 template<typename F>
+
+// function to benchmark
 uint64_t time(const F &x, const std::vector<uint64_t> &zomg)
 {
     auto start = std::chrono::high_resolution_clock::now();
