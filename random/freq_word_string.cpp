@@ -30,11 +30,12 @@ int main()
 
         chk = i -temp;
         if(chk == j)
+        {
             countW++;
             i = temp;
             i++;
-    }
-
+        }
+        
     /*output the result*/
     cout << "\nOccurance of the word: " << countW;
     cout << endl;

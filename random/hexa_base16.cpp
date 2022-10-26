@@ -1,11 +1,11 @@
-/*include the libary*/
+// include the libary
 #include <iostream>
 
 using namespace std;
 
 string base16(int n);
 
-/*main function */
+// main function
 int main()
 {
     int a;
@@ -14,6 +14,7 @@ int main()
     cout << "Base 16 is: " << base16(a) << endl;
 }
 
+// function to convert to base 16
 char digit16(int digit)
 {
     if(digit >= 10)
@@ -26,6 +27,7 @@ char digit16(int digit)
     }
 }
 
+// print the base 16
 string base16(int n)
 {
     string result = "";

@@ -28,12 +28,14 @@ int main()
         if(det == 0)
         {
             root1 = root2 - b / (2 * a);
+            /*print the output*/
             printf("\nThe roots are %f and %f\n", root1, root2);
         }
         else if(det > 0)
         {
             root1 = (-b + sqrt(det)) / (2 * a);
             root2 = (-b - sqrt(det)) / (2 * a);
+            /*print the output*/
             printf("\nThe roots are %f and %f\n", root1, root2);
         }
         else
@@ -41,7 +43,7 @@ int main()
             float real, img;
             real = -b / (2 * a);
             img = sqrt(abs(det)) / (2 * a);
-
+            /*print the output*/
             printf("\nThe roots are %f + %fi and %f - %fi\n", real, img, real, img);
         }
     }
