@@ -3,6 +3,7 @@
 #include <fstream>
 #include <stdio.h>
 
+// use the standard namespace
 using namespace std;
 
 // main function
