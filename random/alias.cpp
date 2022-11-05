@@ -1,6 +1,7 @@
 /*include the header file*/
 #include <iostream>
 
+/*using standard namespace*/
 using namespace std;
 
 int &function(void)
