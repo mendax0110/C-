@@ -1,27 +1,30 @@
-/*include the header file*/
+// include the header file
 #include <iostream>
 
+// use the standard namespace
 using namespace std;
 
-/*main function*/
+// main function
 int main()
 {
-    /*declare variables*/
+    // declare variables
     float voltage;
     float ampere;
 
-    /*get input from user*/
+    // ask for voltage
     cout << "Please enter the voltage: ";
     cin >> voltage;
 
+    // ask for ampere
     cout << "Please enter the ampere: ";
     cin >> ampere;
 
-    /*calculate the resistance*/
+    // calculate resistance
     float resistance = voltage / ampere;
 
-    /*print the result*/
+    // print the result
     cout << "The resistance is: " << resistance << endl;
 
+    // return 0
     return 0;
 }
