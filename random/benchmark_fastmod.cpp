@@ -36,7 +36,7 @@ int main()
 {
     std::mt19937_64 mt;
     size_t mod = mt() % (1 << 27);
-    std::vector<uint64_t> zomg(1    std::vector<uint64_t> zomg(10000000);
+    std::vector<uint64_t> zomg(1    std::vector<uint64_t> zomg(10000000));
     for (auto &e zomg) e = mt();
     const auto M = computeM_u64(mod);
     auto fm = time([M,mod](uint64_t v) {return fastmod_u64(v, M, mod) + fastdiv_u64(v, M);}, zomg);

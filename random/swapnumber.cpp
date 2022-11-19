@@ -1,38 +1,45 @@
-/*include the library*/
+// include the header file
 #include <iostream>
 
+// use the standard namespace
 using namespace std;
 
-/*declare the function*/
-void cyclicSwap(int *a, int *b, int *c);
+void cyclic(int *a, int *b, int *c);
 
-/*main function*/
+// main function
 int main()
-{
+{   
+    // declare variables
     int a, b, c;
 
-    /*input the value*/
-    cout << "Enter value of a, b and c respectively: ";
+    // get the input from the user
+    cout << "Enter the value of a, b and c respectively: ";
     cin >> a >> b >> c;
 
-    /*call the function*/
-    cout << "Value before swapping: " << endl;
-    cout << "a, b and c respectively are: " << a << ", " << b << ", " << c << endl;
-    
-    cyclicSwap(&a, &b, &c);
-    /*call the function*/
-    cout << "Value after swapping number in cyclic manner: " << endl;
-    cout << "a, b and c respectively are: " << a << ", " << b << ", " << c << endl;
+    // display the values before swapping
+    cout << "The value of a, b and c before swapping are: " << endl;
+    cout << "a, b and c respectively: " << a << ", " << b << ", " << c << endl;
+
+    // call the function
+    cyclic(&a, &b, &c);
+
+    // display the result after swapping
+    cout << "The value after swapping number in cyclic order are: " << endl;
+    cout << "a, b and c respectively: " << a << ", " << b << ", " << c << endl;
 
     return 0;
 }
 
-void cyclicSwap(int *a, int *b, int *c)
+// function definition
+void cyclic(int *a, int *b, int *c)
 {
     int temp;
-    temp = *b;
-    *b = *a;
-    *a = *c;
+
+    // swap the values
+    temp = *a;
+    *a = *b;
+    *b = *c;
     *c = temp;
 }
 
+    
