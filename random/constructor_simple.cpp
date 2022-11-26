@@ -1,29 +1,32 @@
-/*include the header file*/
+// include the header file
 #include <iostream>
 
+// use standard namespace
 using namespace std;
 
-/*constructor class*/
+// constructor class
 class construct
 {
     public:
+
         int num;
         char ch;
 
         construct()
         {
             num = 100;
-            ch  = 'A';
+            ch = 'A';
         }
 };
 
-/*main function*/
+// main function
 int main()
 {
     construct obj;
 
-    cout << "num: " << obj.num << endl;
-    cout << "ch: "  << obj.ch;
+    // print the values
+    cout << "num = " << obj.num << endl;
+    cout << "ch = " << obj.ch << endl;
 
     return 0;
 }
