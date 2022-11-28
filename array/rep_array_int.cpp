@@ -2,6 +2,7 @@
 #include <iostream>
 #include <bits/stdc++.h>
 
+// use the standard namespace
 using namespace std;
 
 // main function
