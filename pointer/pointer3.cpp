@@ -1,25 +1,36 @@
-/*include the library*/
+// include the header files
 #include <iostream>
 
+// use the standard namespace
 using namespace std;
 
-/*void function*/
+// function
 void function(int* zahl2)
 {
-    /*print the value of the pointer*/
-    cout << "Adresse von zahl2: " << &zahl2 << endl;
+    // print the value of the pointer
+    cout << "Address of number2: " << &zahl2 << endl;
     *zahl2 *= 2;
 }
 
-/*main function*/
+// main function
 int main()
 {
-    int zahl1 = 5;
+    // declare a variable
+    int zahl1 = 10;
 
-    /*print the value of the pointer*/
-    cout << "Zahl1 von der Funktion: " << zahl1 << endl;
-    cout << "Adresse: " << &zahl1 << endl;
+    // print the value of the variable
+    cout << "Value of number1: " << zahl1 << endl;
+    // print the address of the variable
+    cout << "Address of number1: " << &zahl1 << endl;
+
+    // call the function
     function(&zahl1);
-    cout << "Zahl1 von der Funktion: " << zahl1 << endl;
+    
+    // print the value of the variable
+    cout << "Value of number1: " << zahl1 << endl;
+    // print the address of the variable
+    cout << "Address of number1: " << &zahl1 << endl;
+    
+    // return 0
+    return 0;
 }
-
