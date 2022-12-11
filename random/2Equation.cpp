@@ -1,22 +1,25 @@
-/*include the header file*/
+// include the libraries
 #include <stdio.h>
 #include <math.h>
 #include <conio.h>
 
+// use the standard namespace
 using namespace std;
 
-/*main function*/
+// main function
 int main()
 {
     float root1, root2;	   
     float a, b, c;
     float det;
-    /*input the value of a, b, c*/
+    
+    // input the value of a, b, c
     printf("Enter the coefficients of the quadratic equation: ");
-    /*scanf the value of a, b, c*/
+    
+    // scanf the value of a, b, c
     scanf("%f %f %f", &a, &b, &c);
 
-    /*calculate the determinant*/
+    // calculate the determinant
     if(a * b * c == 0)
     {
         printf("Can't solve the equation");
@@ -28,14 +31,16 @@ int main()
         if(det == 0)
         {
             root1 = root2 - b / (2 * a);
-            /*print the output*/
+            
+            // print the output
             printf("\nThe roots are %f and %f\n", root1, root2);
         }
         else if(det > 0)
         {
             root1 = (-b + sqrt(det)) / (2 * a);
             root2 = (-b - sqrt(det)) / (2 * a);
-            /*print the output*/
+            
+            // print the output
             printf("\nThe roots are %f and %f\n", root1, root2);
         }
         else
@@ -43,7 +48,7 @@ int main()
             float real, img;
             real = -b / (2 * a);
             img = sqrt(abs(det)) / (2 * a);
-            /*print the output*/
+            // print the output
             printf("\nThe roots are %f + %fi and %f - %fi\n", real, img, real, img);
         }
     }
