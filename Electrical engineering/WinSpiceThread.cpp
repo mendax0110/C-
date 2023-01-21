@@ -84,6 +84,7 @@ void restart_winspice(int index)
     });
 }
 
+// Main function
 int main()
 {
     // Start a new instance of winspice.exe
