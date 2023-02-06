@@ -1,6 +1,7 @@
-#include <openssl/x509.h>
-#include <openssl/ssl.h>
-#include <openssl/err.h>
+// take the includes from the openssl-3.1.0-beta1 folder
+#include </openssl-3.1.0-beta1/include/openssl/x509.h>
+#include </openssl-3.1.0-beta1/include/openssl/ssl.h>
+#include </openssl-3.1.0-beta1/include/openssl/err.h>
 
 int main(int argc, char** argv)
 {
